@@ -19,19 +19,33 @@ const recordCollection = {
 };
 
 // Sua função deve sempre retornar o recordsobjeto inteiro.
-// Se valuefor uma string vazia, exclua a proppropriedade fornecida do álbum.
-// Se propnão for trackse valuenão for uma string vazia, atribua o valueao prop.
-// Se propfor trackse o valor não for uma string vazia, adicione o valueao final da tracksmatriz do álbum. Você precisa criar essa matriz primeiro se o álbum não tiver uma trackspropriedade.
+// Se value for uma string vazia, exclua a prop propriedade fornecida do álbum.
+// Se prop não for track se value não for uma string vazia, atribua o value ao prop.
+// Se prop for track se o valor não for uma string vazia, adicione o value ao final da tracks matriz do álbum. Você precisa criar essa matriz primeiro se o álbum não tiver uma tracks propriedade.
 
 function updateRecords(records, id, prop, value) {
   if (value === "") {
     delete records[id][prop];
-  } else if (prop != "tracks" && value !== "") {
+  } else if (prop !== "tracks" && value !== "") {
     records[id][prop] = value;
   } else if (prop === "tracks" && value === "" && records[id].hasOwnProperty("tracks") === false) {
     records[id][prop] = [value];
-  } else if (prop === "tracks" && value != "") {
+  } else if (prop === "tracks" && value !== "") {
     records[id][prop].push(value);
+  }
+  return records;
+}
+
+// 2.0
+
+function updateRecords2(records, id, prop, value) {
+  if (value === "") {
+    delete records[id][prop];
+  } else if (prop === "tracks") {
+    records[id][prop] = records[id][prop] || []; // shortcircuit evaluation
+    records[id][prop].push(value);
+  } else {
+    records[id][prop] = value;
   }
   return records;
 }
