@@ -11,6 +11,7 @@ let numero = 9
 
 
 // WHILE
+
 let i = 1;
 let numero2 = 6
 
