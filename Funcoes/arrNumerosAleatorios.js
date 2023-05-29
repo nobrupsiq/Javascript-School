@@ -3,14 +3,16 @@
 // E retornar um array com números entre 0 e o valor máximo;
 // Exiba os resultados
 
-function numerosAleatorios(tamArray, vMin, vMax) {
-  const arrayList = tamArray = [];
-  let arr = Math.random(vMin, vMax);
-  tamArray.push(arr);
-
+function numerosAleatorios(tamArray, vMax) {
+  const arrayList = [];
+  
+  for(let i = 0; i < tamArray; i++) {
+    arrayList.push(Math.floor(Math.random() * (vMax + 1)))
+  }
+  
   return arrayList;
 }
 
-const resultado = numerosAleatorios(5, 23, 34)
+const resultado = numerosAleatorios(5, 23)
 
 console.log(resultado)
