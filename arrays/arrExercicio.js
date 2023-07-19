@@ -110,7 +110,7 @@ function integerNumber(number) {
   return fibonacci;
 }
 
-console.log(integerNumber(12));
+// console.log(integerNumber(12));
 
 // 08. Faça o mesmo do exercício anterior, mas com fatorial.
 // Fatorial de 0: 0! = '
@@ -120,7 +120,34 @@ console.log(integerNumber(12));
 // ...
 // Fatorial de n: n x elemento(n-1) = n x (n-1)! = n!
 
-// 08. Usando matriz (array de array), crie o jogo da velha. Inicialmente, as posições são variáveis vazias.
+function factorialNumber(number) {
+  if(number == 0 || number < 0) return 'Digite um número inteiro positivo!'
+
+  let fatorial = []
+  let result = 1;
+
+  for(let i = number; i >= 1; i--) {
+    result *= i;
+    let fatorialString = `${i}! = ${i} `;
+    if(i !== 1) {
+      fatorialString += 'x ';
+    }
+    for (let j = i - 1; j >= 1; j--) {
+      result *= j;
+      fatorialString += `${j}`;
+      if (j !== 1) {
+        fatorialString += ' x ';
+      }
+    }
+    fatorialString += ` = ${result}`;
+    console.log(fatorialString);
+  }
+  return fatorial;
+}
+
+console.log(factorialNumber(10));
+
+// 09. Usando matriz (array de array), crie o jogo da velha. Inicialmente, as posições são variáveis vazias.
 // O usuário fornece a linha e a coluna e clica num botão, então é marcado no tabuleiro X ou O (se for o jogador 1 ou jogador 2) que
 
-// 09. Peça ao usuário uma quantidade de linhas e e outra de colunas, depois declare tal matriz, inicialize todos os elementos de 1 até 'linha x coluna'.
+// 9. Peça ao usuário uma quantidade de linhas e e outra de colunas, depois declare tal matriz, inicialize todos os elementos de 1 até 'linha x coluna'.
