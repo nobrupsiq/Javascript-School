@@ -98,10 +98,19 @@ console.log(indexNumber([3,5,7,8,9,6,2,3,1,3,7], 3));
 
 // 07. Crie um script que pede um inteiro positivo para o usuário. Em seguida, popule uma array com os números de Fibonacci, na hora de somar com os termos anteriores, some com elementos anteriores do array.
 
-// function integerNumber(number) {
-//   if(number == 0 || number < 0) return 'Digite um número inteiro positivo!'
+function integerNumber(number) {
+  if(number == 0 || number < 0) return 'Digite um número inteiro positivo!'
 
-// }
+  let fibonacci = [0, 1];
+
+  for (let i = 2; i < number; i++) {
+    fibonacci[i] = fibonacci[i - 1] + fibonacci[i - 2];
+  }
+
+  return fibonacci;
+}
+
+console.log(integerNumber(12));
 
 // 08. Faça o mesmo do exercício anterior, mas com fatorial.
 // Fatorial de 0: 0! = '
