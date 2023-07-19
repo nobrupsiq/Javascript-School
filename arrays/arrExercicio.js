@@ -83,17 +83,25 @@ bubbleSort(numeros)
 // Ela deve mostrar todos os índices onde esse número aparece no vetor, e não só apenas o primeiro e/ou  último índice em que o número aparece (como nos métodos indexOf e lastIndexOf).
 
 function indexNumber(vetor, n) {
+  if(vetor.length == 0) return [];
+  if(vetor.length == 1) return [0];
+
   let indices = [];
   for(let i = 0; i < vetor.length; i++) {
-    if(vetor[i] == n) {
+    if(vetor[i] === n) {
      indices.push(i)
     }
   }
   return indices;
 }
-console.log(indexNumber([3,5,7,8,9,6,2,3,1,3], 3));
+console.log(indexNumber([3,5,7,8,9,6,2,3,1,3,7], 3));
 
 // 07. Crie um script que pede um inteiro positivo para o usuário. Em seguida, popule uma array com os números de Fibonacci, na hora de somar com os termos anteriores, some com elementos anteriores do array.
+
+// function integerNumber(number) {
+//   if(number == 0 || number < 0) return 'Digite um número inteiro positivo!'
+
+// }
 
 // 08. Faça o mesmo do exercício anterior, mas com fatorial.
 // Fatorial de 0: 0! = '
