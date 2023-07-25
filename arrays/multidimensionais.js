@@ -51,7 +51,3 @@ for (let i = 0; i < matrix.length; i++) {
 // toString - Devolve o array na forma de uma string.
 
 // valueOf - É semelhante ao método toString e devolve o array na forma de uma string.
-
-const teste = [2,4,5,7,22,3,4,8];
-
-console.log(teste.valueOf())
