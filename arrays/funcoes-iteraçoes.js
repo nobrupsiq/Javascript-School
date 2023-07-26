@@ -68,7 +68,6 @@ let numbers2 = Array.from(numbers);
 let evens = Array.from(numbers, x => (x % 2 === 0))
 console.log(evens)
 
-
 // Array Of
 
 let numbers3 = Array.of(1);
@@ -77,6 +76,15 @@ let numbers4 = Array.of(1,2,3,4,5);
 // Tambem podemos usar esse método para fazer uma cópia de um array
 
 let numberCopy = Array.of(...numbers4);
-console.log(numberCopy)
+console.log(numberCopy);
 
 // Método fill
+
+let numbersCopy = Array.of(1,2,3,4,5,6);
+console.log(numbersCopy.fill(5,1,3));
+// O primeiro valor do fill é o numero que vai ser preenchido, o segundo valor é de que index ele ira começar a preencher e o ultimo é até que ponto queremos preencher.
+
+// fill é excelente se quisermos criar um array e inicializar seus valores como vemos a seguir
+
+let ones = Array(6).fill(5);
+console.log(ones);
