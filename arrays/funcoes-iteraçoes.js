@@ -88,3 +88,26 @@ console.log(numbersCopy.fill(5,1,3));
 
 let ones = Array(6).fill(5);
 console.log(ones);
+
+// metodo copyWithin
+
+let copyArray = [1,2,3,4,5,6];
+
+copyArray.copyWithin(1, 3, 5)
+console.log(copyArray)
+
+// Ordenando elementos
+
+console.log(numbers.sort((a, b) => a - b)); // Esse código devolverá um número negativo se b for maior que a
+
+// o codigo anterior também pode ser representado pelo código a seguir
+function compare(a, b) {
+  if(a < b) {
+    return -1;
+  }
+  if(a > b) {
+    return 1
+  }
+  return 0;
+}
+numbers.sort(compare);
