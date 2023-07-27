@@ -111,3 +111,32 @@ function compare(a, b) {
   return 0;
 }
 numbers.sort(compare);
+
+// Ordenação personalizada
+
+const friends = [
+  {name: 'John', age: 30},
+  {name: 'Ana', age: 20},
+  {name: 'John', age: 25}
+];
+
+function comparePerson(a, b) {
+  if(a.age < b.age) {
+    return -1;
+  }
+  if(a.age > b.age) {
+    return 1;
+  }
+  return 0;
+}
+
+console.log(friends.sort(comparePerson));
+
+let names = ['Ana', 'ana', 'Jhon', 'jhon'];
+
+console.log(names.sort());
+
+// locale compare
+
+const names2 = ['Maève', 'Maeve']
+console.log(names2.sort((a, b) => a.localeCompare(b)));
