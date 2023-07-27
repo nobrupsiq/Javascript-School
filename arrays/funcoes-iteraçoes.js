@@ -140,3 +140,41 @@ console.log(names.sort());
 
 const names2 = ['Maève', 'Maeve']
 console.log(names2.sort((a, b) => a.localeCompare(b)));
+
+// Pesquisa
+
+console.log(numbers.indexOf(10))
+console.log(numbers.indexOf(100))
+
+numbers.push(10)
+console.log(numbers.lastIndexOf(10))
+console.log(numbers.lastIndexOf(100))
+
+// Considere o exemplo a seguir
+
+let numberss = [1,2,3,4,5,6,7,8,9,10,11,12,13,14,15];
+
+function multipleOf13(element, index, array) {
+  return (element % 13 == 0)
+}
+console.log(numberss.find(multipleOf13));
+console.log(numberss.findIndex(multipleOf13));
+
+// Metodo includes
+
+console.log(numberss.includes(15));
+console.log(numberss.includes(20));
+
+// Também é possível passar um índice de início a partir do qual queremos que o array faça a pesquisa do valor:
+
+let numberss2 = [7,6,5,4,3,2,1];
+console.log(numberss2.includes(4,5));
+
+// toString e join
+
+console.log(numberss.toString())
+
+// Se quisermos separar os elementos com um separador diferente, por exemplo, -, o método join poderá ser usado para fazer exatamente isso.
+
+const numbersString = numberss.join('-');
+console.log(numbersString);
