@@ -56,3 +56,5 @@ stack2.push(8);
 stack2.pop();
 
 console.log(stack2.toString());
+
+// OBS: , todos os outros métodos que criamos têm complexidade O(1), o que significa que podemos acessar diretamente o elemento no qual estamos interessados e executar uma ação com ele (push, pop ou peek).
