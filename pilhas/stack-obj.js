@@ -50,6 +50,8 @@ class Stack2 {
   }
 }
 
+export default Stack2;
+
 const stack2 = new Stack2();
 stack2.push(5);
 stack2.push(8);
