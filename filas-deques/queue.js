@@ -55,4 +55,18 @@ class Queue {
     this.count = 0;
     this.lowestCount = 0;
   }
+  toString() {
+    if (this.isEmpty()) {
+      return undefined;
+    }
+    let objString = `${this.items[this.lowestCount]}`;
+    for (let i = this.lowestCount + 1; i < this.count; i++) {
+      objString = `${objString}, ${this.items[i]}`;
+    }
+    return objString;
+  }
 }
+
+// As classes Queue e Stack são muito parecidas. A única diferença está nos
+// métodos dequeue e peek, que se deve à distinção entre os princípios FIFO e
+// LIFO.
