@@ -12,12 +12,9 @@
 
 class Queue {
   constructor() {
-    this.count = 2; // 1° // controle de tamanho de fila
+    this.count = 0; // 1° // controle de tamanho de fila
     this.lowestCount = 0; // 2° // Irá manter o controle do primeiro elemento
-    this.items = {
-      0: 5,
-      1: 8,
-    }; // 3° // Armazenador de items da fila
+    this.items = {}; // 3° // Armazenador de items da fila
   }
   enqueue(element) {
     // Só podemos adicionar novos itens no final da fila.
@@ -70,3 +67,17 @@ class Queue {
 // As classes Queue e Stack são muito parecidas. A única diferença está nos
 // métodos dequeue e peek, que se deve à distinção entre os princípios FIFO e
 // LIFO.
+
+const queue = new Queue();
+
+console.log(queue.isEmpty());
+
+queue.enqueue('Bruno');
+queue.enqueue('Teste');
+queue.enqueue('Gwen');
+console.log(queue.toString());
+console.log(queue.size());
+console.log(queue.isEmpty());
+queue.dequeue();
+queue.dequeue();
+console.log(queue.toString());
