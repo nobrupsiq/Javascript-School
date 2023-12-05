@@ -1,19 +1,19 @@
 function quickSort(array) {
-  if(array.length === 0) return [];
-  if(array.length === 1) return array;
+    if (array.length === 0) return [];
+    if (array.length === 1) return array;
 
-  let pivot = array[0];
+    let pivot = array[0];
 
-  let smallerPivot = array.filter(n => n < pivot);
-  let equalPivot = array.filter(n => n === pivot);
-  let biggerPivot = array.filter(n => n > pivot);
+    let smallerPivot = array.filter((n) => n < pivot);
+    let equalPivot = array.filter((n) => n === pivot);
+    let biggerPivot = array.filter((n) => n > pivot);
 
-  return quickSort(smallerPivot).concat(equalPivot).concat(quickSort(biggerPivot))
+    return quickSort(smallerPivot)
+        .concat(equalPivot)
+        .concat(quickSort(biggerPivot));
 }
 
-
-console.log(quickSort([12,66,3,22,4,5,7,7,1]))
-
+console.log(quickSort([12, 66, 3, 22, 4, 5, 7, 7, 1]));
 
 // O meu pivot vai ser o -> 12
 
@@ -28,7 +28,6 @@ console.log(quickSort([12,66,3,22,4,5,7,7,1]))
 // [3,4,5,7,7,1]
 // [1]
 // [4,5,7,7]
-
 
 // [4,5,7,7]
 // [4]

@@ -4,12 +4,12 @@ number[number.length] = 10;
 number.push(11);
 number.push(12, 13);
 
-Array.prototype.insertFirstPosition = function(value) {
-  for(let i = this.length; i >= 0; i--) {
-    this[i] = this[i - 1];
-  }
-  this[0] = value;
-}
+Array.prototype.insertFirstPosition = function (value) {
+    for (let i = this.length; i >= 0; i--) {
+        this[i] = this[i - 1];
+    }
+    this[0] = value;
+};
 
 number.insertFirstPosition(-1);
 
